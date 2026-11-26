@@ -6,7 +6,7 @@
       "distribution": "internal",
       "android": { "buildType": "apk" },
       "env": {
-        "EXPO_PUBLIC_SUPABASE_URL": "https://aaljpyqlfukdtfztfwrk.supabase.co/rest/v1/",
+        "EXPO_PUBLIC_SUPABASE_URL": "https://aaljpyqlfukdtfztfwrk.supabase.co",
         "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFhbGpweXFsZnVrZHRmenRmd3JrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIwMjI1MTYsImV4cCI6MjEwNzU5ODUxNn0.7Qxn86x6qB954dHewHbuyDRB4MRrTatiN5XlC1y4LQ0"
       }
     },
