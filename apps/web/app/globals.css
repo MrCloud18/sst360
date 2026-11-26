@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { background: #0F111A; color: #F8FAFC; }
+body { font-family: Inter, Roboto, system-ui, 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; }
+:focus-visible { outline: 2px solid #06B6D4; outline-offset: 2px; }
+.input { @apply w-full rounded-lg border border-line bg-base px-3 py-2 text-sm text-ink placeholder:text-mute/70 focus:border-violet focus:outline-none; }
+.btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition disabled:opacity-50; }
+.btn-primary { @apply bg-brand text-white hover:opacity-90; }
+.btn-ghost { @apply border border-line text-ink hover:bg-white/5; }
+.btn-danger { @apply border border-danger/40 text-danger hover:bg-danger/10; }
+.th { @apply px-4 py-3 text-left text-xs font-medium text-mute; }
+.td { @apply px-4 py-3 text-sm; }
+@media print {
+  aside, header, .no-print { display: none !important; }
+  html, body { background: #fff !important; color: #000 !important; }
+  .print-area { background: #fff !important; color: #000 !important; border: none !important; }
+}
