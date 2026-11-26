@@ -1,8 +1,9 @@
-// Configuración dinámica de Expo (permite inyectar la llave de Google Maps desde variables de entorno)
+// Configuración dinámica de Expo
 module.exports = ({ config }) => ({
   ...config,
   name: 'SST 360',
   slug: 'sst360',
+  owner: 'santiagoyms-organization',
   scheme: 'sst360',
   version: '1.0.0',
   orientation: 'portrait',
@@ -20,5 +21,5 @@ module.exports = ({ config }) => ({
     ['expo-image-picker', { photosPermission: 'SST 360 necesita acceso a tus fotos para adjuntar evidencias.', cameraPermission: 'SST 360 necesita la cámara para tomar evidencias.' }],
   ],
   experiments: { typedRoutes: false },
-  extra: { eas: { projectId: process.env.EAS_PROJECT_ID } },
+  extra: { eas: { projectId: '3b1313a3-f9dd-4d00-bb36-3f53483471a7' } },
 })

@@ -3,10 +3,10 @@ import { ActivityIndicator, Image, Linking, Platform, Pressable, RefreshControl,
 import { LinearGradient } from 'expo-linear-gradient'
 import Svg, { Circle } from 'react-native-svg'
 import { Ionicons } from '@expo/vector-icons'
+import { WebView } from 'react-native-webview'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useT } from '../lib/auth'
 import { gradient } from '../lib/theme'
-import { WebView } from 'react-native-webview'
 
 export function Screen({ children, onRefresh, refreshing = false, pad = true, bottom = 24 }: { children: ReactNode; onRefresh?: () => void; refreshing?: boolean; pad?: boolean; bottom?: number }) {
   const t = useT(); const ins = useSafeAreaInsets()
@@ -112,7 +112,7 @@ export function Row({ children, style, onPress }: { children: ReactNode; style?:
   const inner = <View style={[{ flexDirection: 'row', alignItems: 'center', gap: 12 }, style]}>{children}</View>
   return onPress ? <Pressable onPress={onPress}>{inner}</Pressable> : inner
 }
-// Mapa: usa react-native-maps solo si hay llave de Google (Android) o en iOS; si no, muestra coordenadas con enlace.
+// Mapa con OpenStreetMap + Leaflet dentro de un WebView (sin llave de API, gratis)
 export function LocationMap({ lat, lng, height = 160 }: { lat?: number | null; lng?: number | null; height?: number }) {
   const t = useT()
   if (lat == null || lng == null) return <Muted>Sin ubicación registrada.</Muted>
